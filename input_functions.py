@@ -65,24 +65,18 @@ def file_input():
 def encrypting_input():
     print("""
         Which encryption method to use?
-        1. Caesar
-        2. Advance_Caesar
-        3. Transposition
-        4. Advance_Transposition
-        5. RSA
-        6. Advance_RSA""")
+        1. Advance_Caesar
+        2. Advance_Transposition
+        3. Advance_RSA""")
 
     # Get encryption method choice
-    choice = int_input(1, 6)
+    choice = int_input(1, 3)
 
     # Mapping user input to encryption methods
     menus = {
-        1: encryption.caesar_cipher,
-        2: advanced_encryption.caesar_cipher,
-        3: encryption.transposition_cipher,
-        4: advanced_encryption.transposition_cipher,
-        5: encryption.rsa_cipher,
-        6: advanced_encryption.rsa_cipher
+        1: advanced_encryption.caesar_cipher,
+        2: advanced_encryption.transposition_cipher,
+        3: advanced_encryption.rsa_cipher
     }
 
     # Get the file path for message to be encrypted
@@ -90,12 +84,12 @@ def encrypting_input():
     path = file_input()
 
     # Handle key input for different encryption methods
-    if choice <= 4:
-        print("Please enter your key:")
-        if choice % 2 == 1:  # Odd choices use integer keys
-            key = int_input(1, float("inf"))
-        else:  # Even choices use string keys
-            key = str_input()
+    if choice != 3:
+        if choice == 1:
+            print("Please enter your keys with spaces between them:")
+        else:
+            print("Please enter your key:")
+        key = str_input()
         menus[choice](path, key)  # Call the encryption method with the key
     else:
         menus[choice](path)  # Call the RSA encryption methods without key
@@ -104,56 +98,31 @@ def encrypting_input():
 def decrypting_input():
     print("""
         Which decryption method to use?
-        1. Caesar
-        2. Advance_Caesar
-        3. Transposition
-        4. Advance_Transposition
-        5. RSA
-        6. Advance_RSA""")
+        1. Advance_Caesar
+        2. Advance_Transposition
+        3. Advance_RSA""")
 
     # Get decryption method choice
-    choice = int_input(1, 6)
+    choice = int_input(1, 3)
 
     # Mapping user input to decryption methods
     menus = {
-        1: encryption.caesar_cipher,
-        2: advanced_encryption.caesar_cipher,
-        3: encryption.transposition_cipher,
-        4: advanced_encryption.transposition_cipher,
-        5: encryption.rsa_cipher,
-        6: advanced_encryption.rsa_cipher
-    }
+            1: advanced_encryption.caesar_cipher,
+            2: advanced_encryption.transposition_cipher,
+            3: advanced_encryption.rsa_cipher
+        }
 
     # Get the file path for the encrypted message
     print("Please enter your choice (A path to the hidden message file, exit, main):")
     path = file_input()
 
     # Handle key input for different decryption methods
-    if choice <= 4:
-        print("Please enter your key:")
-        if choice % 2 == 1:
-            key = int_input(1, float("inf"))
+    if choice != 4:
+        if choice == 1:
+            print("Please enter your keys with spaces between them:")
         else:
-            key = str_input()
+            print("Please enter your key:")
+        key = str_input()
         menus[choice](path, key, False)  # Decrypt the file with key
     else:
         menus[choice](path, False)  # Decrypt the RSA file without key
-
-# Function to handle steganography input (hiding message in image)
-def steganography_input():
-    print("Please enter your choice (A path to the image file to hide in it, exit, main):")
-    image_path = file_input()
-
-    print("Please enter your choice (A path to the message file to hide, exit, main):")
-    message = file_input()
-
-    # Hide the message in the image
-    img_encode.hide_message(image_path, message)
-
-# Function to handle steganography extraction (extracting hidden message from image)
-def steganography_extraction_input():
-    print("Please enter your choice (A path to the encrypted image file, exit, main):")
-    image_path = file_input()
-
-    # Extract the hidden message from the image
-    img_decode.extract_message(image_path)
