@@ -1,4 +1,4 @@
-# EncryptionProject
+# EncryptionProject level 2
 
 ## Description
 EncryptionProject is a Python-based tool for encrypting and decrypting files and images using various encryption techniques, including both traditional and advanced methods.
