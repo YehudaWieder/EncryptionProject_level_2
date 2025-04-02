@@ -5,10 +5,7 @@ EncryptionProject is a Python-based tool for encrypting and decrypting files and
 ## Project Structure
 
 - **main.py**: The main script that orchestrates the program.
-- **encryption.py**: Functions for encrypting and decrypting data.
 - **advanced_encryption.py**: Functions for advanced encryption techniques.
-- **img_encode.py**: Functions for steganography - encrypting in images.
-- **img_decode.py**: Functions for steganography extraction - decrypting encrypted images.
 - **input_functions.py**: Functions for user input handling.
 - **file_functions.py**: Functions for handling file operations such as reading and writing.
 - **requirements.txt**: A file that contains a list of all the necessary dependencies for the project.
@@ -53,6 +50,5 @@ EncryptionProject is a Python-based tool for encrypting and decrypting files and
    **2. Transposition Cipher** - Rearranges the letters of the plaintext in a predetermined pattern.
    **3. RSA Encryption** - A public-key cryptosystem where messages are encrypted with a public key and decrypted with a private key.
    **4. Steganography** - Hides text inside an image file.
-   - For each method, you can choose between basic encryption and advanced encryption, which uses the same method but with a more advanced key.
    - Some encryption methods require a **KEY**, which is provided by the user.
 
