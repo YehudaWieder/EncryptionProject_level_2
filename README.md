@@ -45,10 +45,16 @@ EncryptionProject is a Python-based tool for encrypting and decrypting files and
    ```
 
 2. Follow the on-screen instructions to choose an encryption method:
-   ##Encryption Methods:
+
+## Encryption Methods:  
+
    **1. Caesar Cipher** - A shift-based encryption where each letter is replaced by another letter.  
+   
    **2. Transposition Cipher** - Rearranges the letters of the plaintext in a predetermined pattern.  
+   
    **3. RSA Encryption** - A public-key cryptosystem where messages are encrypted with a public key and decrypted with a private key.  
+   
    **4. Steganography** - Hides text inside an image file.  
+   
    - Some encryption methods require a **KEY**, which is provided by the user.
 
