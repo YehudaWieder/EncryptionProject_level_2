@@ -1,10 +1,7 @@
 import pyinputplus as pyip
 import os
 from main import main
-import encryption
 import advanced_encryption
-import img_decode
-import img_encode
 
 # Function to handle integer input within a given range (min to max)
 def int_input(min, max):
@@ -117,7 +114,7 @@ def decrypting_input():
     path = file_input()
 
     # Handle key input for different decryption methods
-    if choice != 4:
+    if choice != 3:
         if choice == 1:
             print("Please enter your keys with spaces between them:")
         else:
