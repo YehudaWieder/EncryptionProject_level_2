@@ -1,7 +1,7 @@
 # EncryptionProject level 2
 
 ## Description
-EncryptionProject is a Python-based tool for encrypting and decrypting files and images using various encryption techniques, including both traditional and advanced methods.
+EncryptionProject is a Python-based tool for encrypting and decrypting files and images using various encryption techniques with advanced methods.
 ## Project Structure
 
 - **main.py**: The main script that orchestrates the program.
@@ -15,7 +15,7 @@ EncryptionProject is a Python-based tool for encrypting and decrypting files and
 ## Requirements
 - Python 3.x
 
-- The required dependencies are listed in **requirements.txt** and include:
+The required dependencies are listed in **requirements.txt** and include:
 - **pycryptodome** - Provides cryptographic functions such as RSA encryption.
 - **pillow** - Used for image processing in steganography.
 - **pyinputplus** - Handles user input validation.
@@ -53,8 +53,6 @@ EncryptionProject is a Python-based tool for encrypting and decrypting files and
    **2. Transposition Cipher** - Rearranges the letters of the plaintext in a predetermined pattern.  
    
    **3. RSA Encryption** - A public-key cryptosystem where messages are encrypted with a public key and decrypted with a private key.  
-   
-   **4. Steganography** - Hides text inside an image file.  
-   
+      
    - Some encryption methods require a **KEY**, which is provided by the user.
 
